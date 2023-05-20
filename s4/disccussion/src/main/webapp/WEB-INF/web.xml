@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+
+<!-- INFORMATION -->
+<servlet>
+	<!-- Set the servlet name for class -->
+	<servlet-name>information</servlet-name>
+	<!-- Add the class name with its package -->
+	<servlet-class>com.zuitt.informationServlet</servlet-class>
+	<!-- Data that can be access-->
+	<init-param>
+		<param-name>status</param-name>
+		<param-value>open</param-value>	
+	</init-param>
+</servlet>
+  
+<servlet-mapping>
+	<servlet-name>information</servlet-name>
+	<!-- Specifies the end point for the servlet -->
+	<url-pattern>/information</url-pattern>
+</servlet-mapping>
+	<!-- ************************************** -->
+	
+<!-- ROOM -->
+<servlet>
+    <servlet-name>room</servlet-name>
+    <servlet-class>com.zuitt.RoomServlet</servlet-class>
+</servlet>
+ 
+<servlet-mapping>
+    <servlet-name>room</servlet-name>
+    <!-- Specifies the end point for the servlet -->
+    <url-pattern>/room</url-pattern>
+    
+</servlet-mapping>
+	<!-- ************************************** -->
+
+
+<!-- CONTEXT -->
+<context-param>
+	<param-name>hotel_name</param-name>
+	<param-value>Hotel Servlet Philippines</param-value>
+</context-param>
+<context-param>
+	<param-name>hotel_address</param-name>
+	<param-value>1 Drive, Bonifacio Glohbal City, Philippines</param-value>
+</context-param>
+<context-param>
+	<param-name>hotel_contact</param-name>
+	<param-value>hotelservlet@gmail.com</param-value>
+</context-param>
+
+
+
+</web-app>
